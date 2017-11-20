@@ -50,11 +50,15 @@ When an Identity Provider’s registrar (normally the Identity Provider’s home
 
 5.3 The Identity Provider meets the following technical criteria: 
 
-5.3.1 The Identity Provider provides a unique mdui:DisplayName in metadata (an english language version xml:lang=”en” is RECOMMENDED).
+5.3.1 The Identity Provider provides a unique mdui:DisplayName in metadata with the following qualities:
+5.3.1.1 There MUST be an XML tagged english language version xml:lang=”en”. (Note that sites can place their primary langauge here)
+5.3.1.2 There MAY be an XML tagged alternate language version of the Identity Providers choosing
+5.3.1.3 Unique is defined as unique in the set of eduGAIN entities at current time of registration
+5.3.1.3.1 To disambiguate identically named DisplayNames it is recommended to annotate with physical location 'at <location>,<country>' 
 
 5.3.2 The mdui:DisplayName accurately reflects the organisation in question.
 
-5.3.3 The Identity Provider releases the eduPersonScopedAffiliation attribute.
+5.3.3 The Identity Provider releases the eduPersonScopedAffiliation attribute globally to any Service Provider in eduGAIN over any protocol (SAML, OIDC, ABFAB, etc) where possible.
 
 Academia Identity Providers MUST resolve issues of non-compliance within a reasonable period of time from when they become aware of the issue. Failure to do so MUST result in revocation of the entity’s membership in the category.
 
